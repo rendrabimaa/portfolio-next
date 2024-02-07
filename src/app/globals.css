@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,14 +20,31 @@
   }
 }
 
+/* Untuk scrollbar pada desktop Chrome, Safari, dan Opera */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #62f9d5;
+  border-radius: 10px;
+   /* Warna thumb (bagian yang dapat digerakkan) */
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); /* Warna track (bagian yang tidak dapat digerakkan) */
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  scroll-behavior: smooth;
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: #0a192f;
 }
 
 @layer utilities {
